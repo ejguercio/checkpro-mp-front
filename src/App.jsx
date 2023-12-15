@@ -1,10 +1,19 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Home from "./views/Home"
+
+
 function App() {
   
-
+  
   return (
-    <>
-      <h1 className="bg-black text-white p-4">Tienda CHECKPRO</h1>
-    </>
+    <main>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>}/> 
+      </Routes>
+    </BrowserRouter>
+    </main>
+    
   )
 }
 

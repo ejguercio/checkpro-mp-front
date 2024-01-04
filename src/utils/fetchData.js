@@ -1,13 +1,14 @@
+const URL_BASE = "http://localhost:8000/"
 const fetchData = async (setBooks) => {
     try {
-        const response = await fetch("http://localhost:8000/books")
+        const response = await fetch(`${URL_BASE}products`)
         if (!response.ok) throw Error(`Error: ${response.statusText}`)
         const data = await response.json()
         console.log(data)
         setBooks(data)
 
     } catch (error) {
-        console.error(error)
+        console.error(error.message)
     }
 }
 export default fetchData

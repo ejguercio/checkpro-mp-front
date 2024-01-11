@@ -25,7 +25,7 @@ const ProductCard=(product)=>{
             })
               .then(response => response.json())
               .then(response => {
-                console.log(response.body);
+                window.location.href=response.response.init_point
               })
               .catch(error => console.log({ error: error.message }));
           };
